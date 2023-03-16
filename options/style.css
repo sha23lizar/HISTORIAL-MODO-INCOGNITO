@@ -1,0 +1,14 @@
+.container{
+  width: 200px;
+  text-align: center;
+  background-color: white;
+  height: 50vh;
+  padding: 23vh 0px;
+  margin: auto;
+}
+body{
+  background-color: grey;
+}
+select{
+  text-align: center;
+}

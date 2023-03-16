@@ -1,0 +1,22 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup.html"
+   },
+   "options_page": "./options/options.html",
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Esta Extenccion fue hecha por Shalom para descargar mas rapido XD",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "incognito": "split",
+   "manifest_version": 2,
+   "name": "Extesion para descargar",
+   "permissions": [ "activeTab","tabs" ,"storage"],
+   "version": "23.09.2004.0"
+}

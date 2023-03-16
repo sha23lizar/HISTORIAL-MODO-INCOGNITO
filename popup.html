@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Off The Record History</title>
+	<link rel="stylesheet" href="style.css">
+	</link>
+	<script type="text/javascript" src="popup.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<div>
+				<span id="btn-opcions" title="menu opciones">
+					<img src="menu-icon.png" class="btn-opcions-icon" />
+					<!-- Icon made by Freepik from www.flaticon.com -->
+				</span>
+				Off the record history
+				<input type="text" class="buscador">
+				<span id="delete-btn" title="Clear history">
+					<img src="search-icon.svg" class="delete-btn-icon" />
+					<!-- Icon made by Freepik from www.flaticon.com -->
+				</span>
+			</div>
+		</header>
+		<main>
+
+
+			<div id="contenedor-opciones" class="">
+				<h2>opciones</h2>
+				<div class="tiempo">
+					<strong class="titulo">fecha:</strong>
+					<label><input type="checkbox" class="ultima-semana" checked name="UltimaSemana"> Esta semana</label>
+					<label>Desde <input type="date" class="fecha-desde" name="dataDesde"> </label>
+					<label>Hasta <input type="date" class="fecha-hasta" name="dateHasta"> </label>
+
+					<strong class="titulo">Horas:</strong>
+					<label>Hora Desde <input type="time" class="hora-desde" name="HoraDesde"> </label>
+					<label>Hora Hasta <input type="time" class="hora-hasta" name="HoraHasta"> </label>
+				</div>
+				<div>
+					<strong class="titulo">Dias:</strong>
+					<label><input class="input-dia" type="checkbox" checked name="Lu">Lu</label>
+					<label><input class="input-dia" type="checkbox" checked name="Ma">Ma</label>
+					<label><input class="input-dia" type="checkbox" checked name="Mi">Mi</label>
+					<label><input class="input-dia" type="checkbox" checked name="Ju">Ju</label>
+					<label><input class="input-dia" type="checkbox" checked name="Vi">Vi</label>
+					<label><input class="input-dia" type="checkbox" checked name="Sa">Sa</label>
+					<label><input class="input-dia" type="checkbox" checked name="Do">Do</label>
+				</div>
+
+				<div>
+
+				</div>
+			</div>
+			<section id="historial">
+				<div class="container-loader">
+					<div style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+							style="height: 100%; width: 100%;">
+							<path
+								d="M162.24,-31.08 C156.59,98.19 272.85,78.45 264.95,-26.14 L492.37,-76.47 L0.00,0.00 Z"
+								style="stroke: none; fill: #191c48;"></path>
+						</svg></div>
+					<div class="loader loader--style3" title="2">
+						<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+							viewBox="0 0 50 50" style="enable-background:#2e2e50;" xml:space="preserve">
+							<path fill="#2e2e50"
+								d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+								<animateTransform attributeType="xml" attributeName="transform" type="rotate"
+									from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+							</path>
+						</svg>
+					</div>
+				</div>
+				<div id="tabs-content">
+					<span id="recently-closed-tab " data-tab-index="0">Incopnito</span><span id="full-history-tab"
+						data-tab-index="1">Historial Principal</span>
+					<div id="tab-bottom-slider"></div>
+				</div>
+				<div id="tab-response-content">
+					<img src="icon128.png" border="0" />
+					<div id="response-text"></div>
+				</div>
+				<ul id="record-list-0" class="tab-record-list"></ul>
+				<ul id="record-list-1" class="tab-record-list"></ul>
+	</div>
+	</section>
+	</main>
+</body>
+
+</html>

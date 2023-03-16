@@ -1,0 +1,423 @@
+body {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #022341;
+  background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #022341;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#container {
+  width: 600px;
+  min-height: 360px;
+  max-height: 550px;
+  background: #fff;
+}
+
+header {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #f8fafb;
+  background: #2e2e50;
+  line-height: 40px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+header div {
+  position: relative;
+}
+
+#delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#delete-btn img {
+  width: 16px;
+  position: relative;
+  top: 0px;
+  opacity: 0.8;
+}
+
+#delete-btn:hover img {
+  opacity: 1;
+}
+
+#tab-response-content {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#tab-response-content img {
+  width: 159px;
+}
+
+#response-text {
+  margin-top: 10px;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.instructions-container {
+  max-width: 312px;
+  margin: 8px auto 0;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.instructions-title {
+  margin-bottom: 4px;
+}
+
+.instructions-list {
+  margin-left: 20px;
+  line-height: 1.3;
+}
+
+#tabs-content {
+  width: 100%;
+  position: relative;
+  background: #2e2e50;
+  overflow: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#tabs-content span {
+  width: 50%;
+  height: 40px;
+  color: #f8fafb;
+  display: inline-block;
+  line-height: 40px;
+  background: #2e2e50;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#tabs-content span:hover {
+  background: #3c3c63;
+}
+
+#tab-bottom-slider {
+  width: 50%;
+  height: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ff785a;
+  transition: all 0.2s;
+}
+
+.list-header {
+  padding: 10px;
+  font-weight: 500;
+  border-bottom: 1px solid #2C3E50;
+}
+
+.tab-record-list {
+  list-style: none;
+  height: 500px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+#record-list-1.tab-record-list {
+  display: none;
+}
+
+.tab-record-list li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 12px 14px;
+  border-top: 1px solid #e6ecf0;
+}
+
+.tab-record-list li:first-child {
+  border-top: none;
+}
+
+.tab-record-list li:hover {
+  background-color: #f5f8fa;
+}
+
+.tab-record-list img {
+  width: 16px;
+  margin-right: 6px;
+}
+
+.tab-record-list img[src*="file-icon.svg"] {
+  height: 14px;
+  opacity: .7;
+}
+
+.tab-record-list a {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  padding-right: 10px;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tab-record-list span {
+  color: #657786;
+}
+
+.tab-record-list a,
+.tab-record-list span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tab-record-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.tab-record-list::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.tab-record-list::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+}
+
+.tab-record-list::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+.container-loader.active {
+  top: 13%;
+}
+
+.container-loader {
+  transition: 0.5s;
+  left: 13%;
+  z-index: 0;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  display: block;
+}
+
+.loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  position: absolute;
+  /* margin: auto; */
+  /* align-self: center; */
+  width: auto;
+  height: auto;
+  top: -6px;
+  left: 36%;
+}
+
+/*
+    Set the color of the icon
+  */
+max-he svg path,
+svg rect {
+  fill: white;
+}
+
+#datos {
+  padding: 0 4px;
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  flex-direction: column;
+  width: 30px;
+
+
+}
+
+#datos .titulo {
+  color: inherit;
+}
+
+#datos .url {
+  padding: 0 7px;
+  font-size: 9px;
+  color: inherit;
+
+}
+
+li span div {
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  width: 400px;
+  font-size: 19px;
+  padding: 30px 0px;
+  /* color: white; */
+  text-align: center;
+}
+
+#datos {
+  padding: 0 4px;
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  flex-direction: column;
+  width: 30px;
+}
+
+.titulo {
+  display: block;
+  font-size: 15px;
+  margin: 0px 0px 3px 0px;
+}
+
+.tiempo label {
+  display: block;
+  padding: 5px 0px;
+  margin: 0px 5px;
+  font-size: 13px;
+}
+
+#contenedor-opciones {
+  display: inline-block;
+  width: 0px;
+  background: #2e2e50;
+  color: white;
+  height: 550px;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+section {
+  display: inline-block;
+  flex: 1;
+  height: 550px;
+}
+
+main {
+  display: flex;
+}
+
+#contenedor-opciones.mostrar {
+  width: 180px;
+  padding: 10px;
+}
+
+.buscador {
+  position: absolute;
+  width: 80%;
+  height: 30px;
+  margin: 8px;
+  right: -88%;
+}
+
+.buscador-activo {
+  right: 9%;
+}
+
+#historial .history-target-link {
+  display: flex;
+  width: 0px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+#historial .history-target-link:hover * {
+
+  text-decoration: underline;
+}
+
+#historial .item-titulo {
+  color: black;
+}
+
+#historial .item-url {
+  font-size: 9px;
+  margin-left: 9px;
+}
+
+#historial {
+  height: 540px;
+  overflow: hidden;
+}
+
+#historial .span-buscador {
+  color: black;
+  background: darkturquoise;
+  border-radius: 3px;
+  text-decoration: inherit;
+}
+
+.contenedor-fecha-hora {
+  color: black;
+  text-align: center;
+  padding: 0px 0px 0px 10px;
+}
+
+#btn-opcions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#btn-opcions img {
+  width: 16px;
+  position: relative;
+  top: 0px;
+  opacity: 0.8;
+}
+#historial.none-Lu .Lu, #historial.none-Ma .Ma, #historial.none-Mi .Mi, #historial.none-Ju .Ju, #historial.none-Vi .Vi, #historial.none-Sa .Sa, #historial.none-Do .Do{
+  display: none;
+}
